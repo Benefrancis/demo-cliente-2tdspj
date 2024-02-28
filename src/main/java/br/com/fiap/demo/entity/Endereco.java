@@ -1,9 +1,15 @@
 package br.com.fiap.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "TB_2TDSPJ_ENDERECO")
 public class Endereco {
@@ -13,7 +19,9 @@ public class Endereco {
             generator = "SQ_ENDERECO")
     @SequenceGenerator(
             name = "SQ_ENDERECO",
-            sequenceName = "SQ_ENDERECO")
+            sequenceName = "SQ_ENDERECO",
+            initialValue = 1,
+            allocationSize = 1)
     @Column(name = "ID_ENDERECO")
     private Long id;
 
