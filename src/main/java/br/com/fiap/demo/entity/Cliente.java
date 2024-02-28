@@ -30,20 +30,12 @@ public class Cliente {
     @Column(name = "NM_CLIENTE")
     private String nome;
 
-    @Column(name = "DT_NASCIMENTO")
-    private LocalDate dataNascimento;
+    @Column(name = "EMAIL")
+    private String email;
 
-    @OneToOne(
-            fetch = FetchType.EAGER,
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST}
-    )
-    @JoinColumn(
-            name = "ENDERECO",
-            referencedColumnName = "ID_ENDERECO",
-            foreignKey = @ForeignKey(
-                    name = "FK_ENDERECO_CLIENTE"
-            )
-    )
-    private Endereco endereco;
+    @Column(name = "DT_NASCIMENTO")
+    private LocalDate nascimento;
+
+
 
 }
