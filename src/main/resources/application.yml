@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: homologacao
+    active: desenvolvimento
 
 server:
   port: 80
