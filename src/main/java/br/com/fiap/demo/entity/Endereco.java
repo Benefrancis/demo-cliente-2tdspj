@@ -1,12 +1,12 @@
 package br.com.fiap.demo.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -47,4 +47,6 @@ public class Endereco {
             )
     )
     private Cliente cliente;
+
+
 }
