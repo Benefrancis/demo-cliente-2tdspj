@@ -23,7 +23,6 @@ public class ClienteResource {
     @Autowired
     private EnderecoRepository enderecoRepository;
 
-
     @Autowired
     private TelefoneRepository telefoneRepository;
 

@@ -8,7 +8,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -35,7 +34,6 @@ public class Cliente {
 
     @Column(name = "DT_NASCIMENTO")
     private LocalDate nascimento;
-
 
 
 }
