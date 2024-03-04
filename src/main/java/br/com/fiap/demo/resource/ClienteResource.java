@@ -24,7 +24,6 @@ public class ClienteResource {
         return repo.findAll();
     }
 
-
     @GetMapping(value = "/{id}")
     public Cliente findAll(@PathVariable("id") Long id) {
         var ret = repo.findById(id);
