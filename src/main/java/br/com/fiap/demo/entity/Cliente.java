@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDate;
 
@@ -33,18 +32,5 @@ public class Cliente {
 
     @Column(name = "DT_NASCIMENTO")
     private LocalDate dataNascimento;
-
-    @OneToOne(
-            fetch = FetchType.EAGER,
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST}
-    )
-    @JoinColumn(
-            name = "ENDERECO",
-            referencedColumnName = "ID_ENDERECO",
-            foreignKey = @ForeignKey(
-                    name = "FK_ENDERECO_CLIENTE"
-            )
-    )
-    private Endereco endereco;
 
 }

@@ -34,7 +34,17 @@ public class Endereco {
     @Column(name = "COMPLEMENTO")
     private String complemento;
 
-    @OneToOne(mappedBy = "endereco")
+    @ManyToOne(
+            fetch = FetchType.EAGER,
+            cascade = {CascadeType.MERGE, CascadeType.PERSIST}
+    )
+    @JoinColumn(
+            name = "CLIENTE",
+            referencedColumnName = "ID_CLIENTE",
+            foreignKey = @ForeignKey(
+                    name = "FK_ENDERECO_CLIENTE"
+            )
+    )
     private Cliente cliente;
 
 }
